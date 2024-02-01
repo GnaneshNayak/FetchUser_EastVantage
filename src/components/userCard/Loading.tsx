@@ -1,39 +1,34 @@
+import React from 'react';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 import './userCard.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { IUser } from '../../api/fetchUserApi';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-interface Props {
-  user: IUser;
-  handleRefresh: () => void;
-}
-
-const UserCard = ({ user, handleRefresh }: Props) => {
+const Loading = () => {
   return (
     <div className="container">
       <div className="card">
         <div className="card-head">
           <div className="user-image">
-            <img src={user?.picture.large} alt="" />
+            <Skeleton circle={true} height={150} width={150} />
           </div>
         </div>
 
         <div className="card-body">
           <div className="user-name">
-            <span className="user-name-title">{user?.name.title} </span>
-            <span className="user-name-full">
-              {user?.name.first} {user?.name.last}
-            </span>
+            <Skeleton width={400} />
           </div>
 
           <div className="user-dob">
-            <span className="user-age">{user?.dob.age}y</span>
+            <span className="user-age">
+              <Skeleton width={100} />
+            </span>
           </div>
 
           <div className="user-location-address">
             <span>
-              {user?.location.city}, {user?.location.state},{' '}
-              {user?.location.country}
+              <Skeleton width={300} />
             </span>
           </div>
         </div>
@@ -42,20 +37,18 @@ const UserCard = ({ user, handleRefresh }: Props) => {
           <div className="user-contact-info">
             <span>
               <FontAwesomeIcon color="#0fcdef" icon={faPhone} />
-              {user?.phone}
+              <Skeleton width={100} />
             </span>
             <span>
               <FontAwesomeIcon color="#0fcdef" icon={faEnvelope} />
-              {user?.email}
+              <Skeleton width={100} />
             </span>
           </div>
         </div>
       </div>
-      <button onClick={handleRefresh} disabled={!user}>
-        {user ? 'Refresh' : 'Refreshing....'}
-      </button>
+      <button disabled={true}>Loading...</button>
     </div>
   );
 };
 
-export default UserCard;
+export default Loading;
