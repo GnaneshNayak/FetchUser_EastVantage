@@ -14,6 +14,10 @@ This React application fetches user data from the Random User Generator API and 
 - Responsive design for optimal viewing on different devices.
 - Loading skeleton for a smooth user experience during data retrieval.
 
+## Live Demo
+
+Check out the live demo of the application hosted on Vercel: [React User Display App](https://fetch-user-east-vantage.vercel.app/)
+
 ## Installation
 
 1. **Clone the repository:**
