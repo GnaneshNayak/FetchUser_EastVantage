@@ -1,0 +1,135 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+  background-color: #fff;
+  max-width: 500px;
+  margin: auto;
+  padding-bottom: 2rem;
+  width: 100%;
+  box-shadow: 0 2px 12px 3px rgba(53, 53, 53, 0.1);
+  border-radius: 4px;
+}
+
+.card-head {
+  height: 50px;
+  position: relative;
+}
+
+.user-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.user-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.user-name {
+  padding: 2rem 0 0.5rem 0;
+  font-size: 1.8rem;
+  color: #162b4e;
+}
+
+.user-name-title {
+  font-weight: 700;
+}
+
+.user-name-full {
+  font-weight: 600;
+}
+
+.user-age {
+  color: #babcc2;
+}
+
+.user-location-address {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  color: #162b4e;
+  padding-top: 0.5rem;
+}
+
+.card-foot {
+  padding-top: 1.8rem;
+  margin: 1.8rem 1.5rem;
+  border-top: 2px solid #0fcdef;
+}
+
+.user-contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.8;
+  font-size: 1.2rem;
+  font-weight: 500;
+  gap: 20px;
+}
+
+.user-contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 1.8rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.5em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+@media screen and (max-width: 768px) {
+  .card-body {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .container {
+    margin: 4rem auto;
+    padding-top: 5rem;
+  }
+
+  .user-post-address {
+    flex-direction: column;
+  }
+
+  .user-contact-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  button {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 0.6em 1.9rem;
+  }
+}
