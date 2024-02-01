@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+# React User Display App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React application to display user information fetched from the [Random User Generator API](https://randomuser.me/api). It includes a loading skeleton for a better user experience during data retrieval.
 
-Currently, two official plugins are available:
+## Introduction
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This React application fetches user data from the Random User Generator API and displays it on the user interface. It includes a responsive design for optimal viewing on various devices and a loading skeleton to enhance the user experience during data retrieval.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Asynchronous fetching of user data from the Random User Generator API.
+- Display of user's full name and email address.
+- Refresh button to fetch another user.
+- Responsive design for optimal viewing on different devices.
+- Loading skeleton for a smooth user experience during data retrieval.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+1. **Clone the repository:**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ```bash
+   git clone https://github.com/GnaneshNayak/FetchUser_EastVantage.git
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd FetchUser_EastVantage
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Start the application in development mode:**
+
+   ```bash
+   npm run dev
+   ```
+
+   Visit [http://localhost:5174](http://localhost:5174) in your browser to view the application.
